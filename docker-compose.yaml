@@ -1,0 +1,31 @@
+services:  
+  mysql:
+    image: mysql:latest
+    container_name: db
+    environment:
+      MYSQL_DATABASE: nullpointer
+      MYSQL_USER: myuser
+      MYSQL_PASSWORD: 123123
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    volumes:
+      - ~/dev/mysql-data:/var/lib/mysql
+    networks:
+      - database
+
+  adminer:
+    image: adminer
+    container_name: adminer
+    ports:
+      - "5000:8080"
+    depends_on:
+      - mysql
+    networks:
+      - database
+
+networks:
+  database:
+
+volumes:
+  mysql-data:

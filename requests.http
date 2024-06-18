@@ -1,0 +1,40 @@
+
+###
+GET http://localhost:8000/api/perguntas HTTP/1.1
+
+
+###
+GET http://localhost:8000/api/perguntas/1 HTTP/1.1
+
+
+###
+POST http://localhost:8000/api/perguntas HTTP/1.1
+Content-Type: application/json
+
+{
+    "titulo": "Docker compose não inicializa database MySQL",
+    "mensagem": "Lorem Ipsum...",
+    "tags": ["docker", "docker-compose"]
+}
+
+
+################### RESPOSTAS #########################
+###
+POST http://localhost:8000/api/respostas HTTP/1.1
+Content-Type: application/json
+
+{
+    "pergunta_id": 1,
+    "mensagem": "compose so funciona na primeira execução do compose up. tera que excluir os arquivos do volume montado!"
+}
+
+
+################### COMENTANDO RESPOSTAS #########################
+###
+POST http://localhost:8000/api/comentarios HTTP/1.1
+Content-Type: application/json
+
+{
+    "resposta_id": 1,
+    "mensagem": "funfo!"
+}
