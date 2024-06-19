@@ -12,7 +12,12 @@ spring:
     username: root
     password: root
   jpa:
+    show-sql: true
     database-platform: org.hibernate.dialect.MySQLDialect
     hibernate:
       ddl-auto: create
     open-in-view: false
+
+environment:
+  urls:
+    webapp: ${WEBAPP_BASE_URL}
