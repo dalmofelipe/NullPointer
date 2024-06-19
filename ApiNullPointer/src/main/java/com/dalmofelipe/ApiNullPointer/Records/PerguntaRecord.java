@@ -11,11 +11,4 @@ public record PerguntaRecord(
     Integer visualizacoes,
     Integer votos,
     List<String> tags
-) {
-
-    public PerguntaRecord {
-        votos = 0;
-        visualizacoes = 0;
-    }
-
-}
+) {}
