@@ -1,3 +1,7 @@
-.pergunta-container {
+.perguntas-container {
     margin-top: 34px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }

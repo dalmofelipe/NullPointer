@@ -1,12 +1,12 @@
 .navbar-container {
     color: white;
 
-    padding: 0px;
+    padding: 0px 10px;
 
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 34px;
+    gap: 20px;
 }
 
 .navbar-logo {
@@ -14,13 +14,18 @@
     text-decoration: none;
     font-size: 2rem;
     padding: 10px 0px;
+    transition: color .2s ease-in-out;
+}
+
+.navbar-logo:hover {
+    color: rgba(var(--cor-destaque), 1.0);
 }
 .navbar-logo:hover > span {
-    color: grey;
+    color: whitesmoke;
 }
 .navbar-logo > span {
     transition: color .2s ease-in-out;
-    color: var(--cor-destaque);
+    color: rgba(var(--cor-destaque), 1.0);
     font-weight: bold;
 }
 
@@ -33,5 +38,5 @@
     padding: 10px;
 }
 .navbar-menu:hover {
-    color: var(--cor-destaque);
+    color: rgba(var(--cor-destaque), 1.0);
 }

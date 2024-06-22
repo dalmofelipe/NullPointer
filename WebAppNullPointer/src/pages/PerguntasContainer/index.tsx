@@ -23,7 +23,7 @@ const PerguntasContainer = () => {
             <NavBar />
             <Hero tituto='Perguntas' />
             
-            <section className='pergunta-container'>
+            <section className='perguntas-container'>
                 {perguntas.length == 0 && <p>Oppss... Nenhuma pergunta encontrada!</p>}
                 {perguntas && perguntas.map((p, index) => <Pergunta key={index} {...p} />)}
             </section>

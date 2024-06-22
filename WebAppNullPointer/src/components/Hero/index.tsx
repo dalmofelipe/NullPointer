@@ -1,15 +1,16 @@
 import "./styles.css"
 
 type HeroInput = {
-    tituto: string    
+    tituto: string
+    includeSearchBar?: boolean
 }
 
-const Hero = ({ tituto } : HeroInput) => {
+const Hero = ({ tituto, includeSearchBar = false } : HeroInput) => {
     return (
         <div className="hero-container">
             <h3>{ tituto || "Hero" }</h3>
 
-            <input type="text" name="search" id="search" />
+            {includeSearchBar && <input type="text" name="search" id="search" />}
         </div>
     )
 }
