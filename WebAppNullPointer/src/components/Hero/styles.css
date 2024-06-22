@@ -1,0 +1,28 @@
+.hero-container {
+    background-color: var(--cor-destaque);
+    color: whitesmoke;
+    padding: 20px 34px;
+    border-radius: 13px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-container > h3 {
+    padding: 0px;
+    margin: 0px;
+    text-transform: uppercase;
+}
+
+.hero-container > input {
+    border: none;
+    border-radius: 8px;
+    min-width: 300px;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    outline: none;
+
+    font-size: 16px;
+}

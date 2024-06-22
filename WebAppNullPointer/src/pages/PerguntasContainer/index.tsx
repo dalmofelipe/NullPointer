@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react'
+import Hero from '../../components/Hero'
+import NavBar from '../../components/NavBar'
 import Pergunta from '../../components/Pergunta'
 import { PerguntaType } from '../../components/Pergunta/types'
 import { getAllPerguntas } from '../../services/nullpointer.service'
@@ -18,9 +20,10 @@ const PerguntasContainer = () => {
 
     return (
         <div>
-            <h3>Perguntas</h3>
+            <NavBar />
+            <Hero tituto='Perguntas' />
             
-            <section>
+            <section className='pergunta-container'>
                 {perguntas.length == 0 && <p>Oppss... Nenhuma pergunta encontrada!</p>}
                 {perguntas && perguntas.map((p, index) => <Pergunta key={index} {...p} />)}
             </section>
