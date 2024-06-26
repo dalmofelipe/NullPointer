@@ -24,8 +24,9 @@ const PerguntasContainer = () => {
             <Hero tituto='Perguntas' />
             
             <section className='perguntas-container'>
-                {perguntas.length == 0 && <p>Oppss... Nenhuma pergunta encontrada!</p>}
-                {perguntas && perguntas.map((p, index) => <Pergunta key={index} {...p} />)}
+                {perguntas 
+                    ? perguntas.map((p, index) => <Pergunta key={index} {...p} />) 
+                    : <p>Oppss... Nenhuma pergunta encontrada!</p>}
             </section>
         </div>
     )
