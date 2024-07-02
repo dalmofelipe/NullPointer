@@ -1,8 +1,9 @@
 .hero-container {
-    background-color: rgba(var(--cor-destaque), 0.75);
+    background-color: rgba(var(--cor-destaque), 0.5);
     color: whitesmoke;
     padding: 20px 34px;
     border-radius: 8px;
+    max-width: 100%;
 
     display: flex;
     justify-content: space-between;

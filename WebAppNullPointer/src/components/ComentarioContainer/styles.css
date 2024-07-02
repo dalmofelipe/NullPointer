@@ -1,0 +1,25 @@
+.comentario-container {
+    margin: 0px;
+    margin-left: 34px;
+    margin-top: 20px;
+
+    
+    border-left: 3px solid whitesmoke;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5px;
+}
+.comentario-container article {
+    width: 100%;
+    box-sizing: border-box;
+    
+    padding: 5px 15px;
+    background-color: #181818;
+}
+.comentario-container article small {
+    margin: 0px;
+    padding: 0px;
+}

@@ -1,9 +1,10 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import PerguntasContainer from './pages/PerguntasContainer'
-import TagsContainer from "./pages/TagsContainer";
+import PerguntaDetails from "./pages/PerguntaDetails";
+import PerguntasContainer from './pages/PerguntasContainer';
+import TagsPage from "./pages/TagsPage";
 
-import './App.css'
+import './App.css';
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
         <Route path="/">
           <Route index element={<PerguntasContainer />} />
           <Route path="/" element={<PerguntasContainer />} />
-          <Route path='/tags' element={<TagsContainer />} />
+          <Route path="/perguntas/:perguntaId" element={<PerguntaDetails />} />
+          <Route path='/tags' element={<TagsPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

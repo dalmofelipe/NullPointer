@@ -1,0 +1,21 @@
+.pergunta-tags {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 8px;
+    max-width: 400px;
+    color: var(--cor-destaque);
+    margin: 10px 0px;
+}
+
+.pergunta-tags > span {
+    font-size: small;
+    padding: 3px 8px;
+    border-radius: 8px;
+    background-color: rgba(var(--cor-destaque), 0.15);
+    color: rgba(var(--cor-destaque), 1.0);
+}
+
+.pergunta-tags > small {
+    color: var(--cor-destaque);
+}

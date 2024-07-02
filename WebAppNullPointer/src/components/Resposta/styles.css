@@ -1,34 +1,39 @@
-.pergunta-details {
+.resposta {
+    width: 100%;
     max-width: 1040px;
-}
+    padding: 15px;
+    box-sizing: border-box;
 
-.pergunta-mensagem {
+    border-radius: 8px;
+    border: 1px solid grey;
+}
+.resposta > div {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 20px;
+    gap: 10px;
 
     padding-bottom: 10px;
+    border-bottom: 1px solid grey;
 }
-.pergunta-mensagem p {
+.resposta > div > p {
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
 }
 
-
-.pergunta-votos {
+.resposta-votos {
     width: 34px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap: 5px;
+    gap: 3px;
 }
-.pergunta-votos > a {
+.resposta-votos > a {
     color: var(--cor-destaque);
     text-align: left;
 }
-.pergunta-votos > b {
+.resposta-votos > b {
     font-size: large;
 }

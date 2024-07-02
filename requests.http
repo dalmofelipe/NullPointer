@@ -36,5 +36,5 @@ Content-Type: application/json
 
 {
     "resposta_id": 1,
-    "mensagem": "funfo!"
+    "mensagem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus ante et congue ornare. Phasellus auctor lobortis ligula id euismod. Cras consectetur nisi sit amet odio finibus, vitae tincidunt libero maximus.!"
 }

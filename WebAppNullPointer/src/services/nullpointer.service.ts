@@ -6,6 +6,13 @@ const getAllPerguntas = async () => {
         .catch(error => console.error(`Error nullpointer.service.getAllPerguntas: ${error}`));
 }
 
+const getPerguntaByID = async (id:any) => {
+    return await fetch(BASE_URL_API + `/perguntas/${id}`)
+        .then(response => response.json())
+        .catch(error => console.error(`Error nullpointer.service.getPerguntaByID: ${error}`));
+}
+
 export {
-    getAllPerguntas
+    getAllPerguntas,
+    getPerguntaByID
 }

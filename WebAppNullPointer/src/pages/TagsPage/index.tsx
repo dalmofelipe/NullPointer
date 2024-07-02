@@ -3,7 +3,7 @@ import NavBar from "../../components/NavBar"
 
 import "./styles.css"
 
-const TagsContainer = () => {
+const TagsPage = () => {
 
     return (
         <div className="tags-page">
@@ -18,4 +18,4 @@ const TagsContainer = () => {
     )
 }
 
-export default TagsContainer
+export default TagsPage

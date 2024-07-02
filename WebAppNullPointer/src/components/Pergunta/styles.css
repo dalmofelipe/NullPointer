@@ -43,19 +43,3 @@
 .pergunta-footer > span {
     text-wrap: nowrap;
 }
-
-.pergunta-tags {
-    display: flex;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    gap: 8px;
-    max-width: 400px;
-}
-
-.pergunta-tags > span {
-    font-size: small;
-    padding: 3px 8px;
-    border-radius: 8px;
-    background-color: rgba(var(--cor-destaque), 0.25);
-    color: rgba(var(--cor-destaque), 1.0);
-}
