@@ -1,14 +1,14 @@
 import { NavLink } from "react-router-dom";
 
-import { PerguntaType } from './types'
-
-import './styles.css'
 import PerguntaTags from "../PerguntaTags";
+import { PerguntaType } from './types';
+
+import './styles.css';
 
 const Pergunta = ({ id, titulo, mensagem, visualizacoes, votos, tags }:PerguntaType) => {
 
     return <article className='pergunta-container'>
-        <input type="hidden" name="id" value={id}/>
+        {/* <input type="hidden" name="id" value={id}/> */}
 
         <NavLink to={`/perguntas/${id}`} className="pergunta-ttl-link">{titulo}</NavLink>
 

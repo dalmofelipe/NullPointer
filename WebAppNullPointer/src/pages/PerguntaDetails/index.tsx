@@ -1,15 +1,18 @@
 import { useEffect, useState } from 'react'
+import { FaRegThumbsDown, FaRegThumbsUp } from 'react-icons/fa6'
 import { useParams } from 'react-router-dom'
 
 import Hero from '../../components/Hero'
 import NavBar from '../../components/NavBar'
+import PerguntaTags from '../../components/PerguntaTags'
+import RespostaForm from '../../components/RespostaForm'
 import RespostasContainer from '../../components/RespostasContainer/intex'
+
 import { getPerguntaByID } from '../../services/nullpointer.service'
 import { PerguntaDetailsType } from './types'
 
-import { FaRegThumbsDown, FaRegThumbsUp } from 'react-icons/fa6'
-import PerguntaTags from '../../components/PerguntaTags'
 import './styles.css'
+
 
 const PerguntaDetails = () => {
 
@@ -58,6 +61,12 @@ const PerguntaDetails = () => {
                     {pergunta.mensagem}
                 </p>
             </div>
+
+            {/* <div className="pergunta-buttons">
+                <input type="button" value="Responder" className='btn btn-sm btn-destaque' />
+            </div> */}
+
+            <RespostaForm />
 
             <RespostasContainer respostasArray={pergunta.respostas} />
         </div>

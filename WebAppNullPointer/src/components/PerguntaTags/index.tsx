@@ -13,8 +13,9 @@ const PerguntaTags = (props:Props) => {
                 maxWidth: props.maxWidth,
                 justifyContent: `flex-${props.align||'end'}`
             }} 
-            className="pergunta-tags" > 
-            {props.tags 
+            className="pergunta-tags" >
+
+            {props.tags && props.tags.length > 0
                 ? props.tags.map((tag, index) => <span key={index}>{tag}</span>)
                 : <small>Sem Tags Registradas</small>}
         </div>

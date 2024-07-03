@@ -7,6 +7,7 @@ import ComentarioContainer from "../ComentarioContainer";
 import "./styles.css";
 
 const Resposta = (props:RespostaType) => {
+
     const voteUp = (event:any) => {
         event?.preventDefault()
         console.log('up vote')
@@ -17,21 +18,22 @@ const Resposta = (props:RespostaType) => {
     }
 
     return (
-    <article className="resposta">
-        <input type="hidden" value={props.id} />
+        <article className="resposta">
+            <input type="hidden" value={props.id || 0} />
 
-        <div>
-            <span className="resposta-votos">
-                <a href="/" onClick={event => voteUp(event)}><FaRegThumbsUp /></a>
-                <b>{props.votos}</b>
-                <a href="/"  onClick={event => voteDown(event)}><FaRegThumbsDown /></a>
-            </span>
+            <div>
+                <span className="resposta-votos">
+                    <a href="/" onClick={event => voteUp(event)}><FaRegThumbsUp /></a>
+                    <b>{props.votos}</b>
+                    <a href="/"  onClick={event => voteDown(event)}><FaRegThumbsDown /></a>
+                </span>
 
-            <p> <small>30/06/2024</small> <br /> {props.mensagem} </p>
-        </div>
+                <p> <small>30/06/2024</small> <br /> {props.mensagem} </p>
+            </div>
 
-        {props.comentarios && props.comentarios.length > 0 && <ComentarioContainer comentarios={props.comentarios} />}
-    </article>
+            {props.comentarios && props.comentarios.length > 0 
+                && <ComentarioContainer comentarios={props.comentarios} />}
+        </article>
     )
 }
 

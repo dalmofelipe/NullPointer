@@ -1,0 +1,28 @@
+.resposta-form {
+    margin: 0px;
+    padding: 0px 20px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    gap: 15px;
+
+    margin-top: 20px;
+}
+
+.resposta-form label {
+    font-weight: bolder;
+}
+
+.resposta-form textarea {
+    height: 100px;
+
+    max-width: 1000px;
+}
+
+.resposta-form-btns {
+    display: flex;
+    gap: 15px;
+}

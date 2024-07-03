@@ -9,7 +9,7 @@ const TagsPage = () => {
         <div className="tags-page">
             <NavBar />
 
-            <Hero tituto='Tags' />
+            <Hero tituto='Tags' includeSearchBar />
 
             <section className="tags-container">
                 <h3>Tags</h3>

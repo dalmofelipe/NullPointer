@@ -6,13 +6,13 @@
     gap: 15px;
     max-width: 1040px;
     padding: 20px;
+    margin-top: 10px;
 }
 
 .respostas-container h3 {
     padding: 0px;
     margin: 0px;
     margin-top: 10px;
-
 }
 .respostas-container p {
     padding: 0px;

@@ -26,6 +26,11 @@
     margin: 0px;
 }
 
+.pergunta-buttons {
+    display: flex;
+
+    margin-left: 60px;
+}
 
 .pergunta-votos {
     width: 34px;
