@@ -18,6 +18,7 @@
 
 .resposta-form textarea {
     height: 100px;
+    padding: 5px;
 
     max-width: 1000px;
 }

@@ -13,8 +13,8 @@ Content-Type: application/json
 
 {
     "titulo": "Docker compose não inicializa database MySQL",
-    "mensagem": "Mussum Ipsum, cacilds vidis litro abertis. ### Titulo 3 Negão é teu passadis, eu sou faxa pretis. Delegadis gente finis, bibendum egestas augue arcu ut est. Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis. Atirei o pau no gatis, per gatis num morreus.",
-    "tags": ["docker", "docker-compose", "spring-boot", "java", "web", "development", "backend"]
+    "mensagem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus ante et congue ornare. Phasellus auctor lobortis ligula id euismod. Cras consectetur nisi sit amet odio finibus, vitae tincidunt libero maximus!",
+    "tags": "docker,docker-compose,spring-boot,java,web,development,backend"
 }
 
 
@@ -25,11 +25,20 @@ Content-Type: application/json
 
 {
     "pergunta_id": 1,
-    "mensagem": "compose so funciona na primeira execução do compose up. tera que excluir os arquivos do volume montado!"
+    "mensagem": "As configurações do mysql via env vars são aplicadas na somente na primeira execução do docker compose up, Exclua os arquivos do volume montado e rode o compose up novamente!"
 }
 
 
 ################### COMENTANDO RESPOSTAS #########################
+###
+POST http://localhost:8000/api/comentarios HTTP/1.1
+Content-Type: application/json
+
+{
+    "resposta_id": 1,
+    "mensagem": "Funfo! VLWWW"
+}
+
 ###
 POST http://localhost:8000/api/comentarios HTTP/1.1
 Content-Type: application/json

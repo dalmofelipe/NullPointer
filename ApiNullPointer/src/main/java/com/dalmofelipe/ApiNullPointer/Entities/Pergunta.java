@@ -1,7 +1,6 @@
 package com.dalmofelipe.ApiNullPointer.Entities;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.Column;
@@ -34,7 +33,7 @@ public class Pergunta {
     private LocalDateTime data;
 
     // TODO: modificar para um padrão com string
-    private List<String> tags;
+    private String tags;
 
     @OneToMany(mappedBy = "pergunta", fetch = FetchType.EAGER)
     private List<Resposta> respostas;
@@ -43,7 +42,7 @@ public class Pergunta {
         this.data = LocalDateTime.now();
         this.votos = 0;
         this.visualizacoes = 0;
-        this.tags = new ArrayList<String>();
+        this.tags = "";
     }
 
 }
