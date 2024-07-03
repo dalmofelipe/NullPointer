@@ -6,6 +6,7 @@
     max-width: 400px;
     color: var(--cor-destaque);
     margin: 10px 0px;
+    padding: 5px;
 }
 
 .pergunta-tags > span {

@@ -21,7 +21,7 @@ const PerguntasContainer = () => {
     return (
         <div>
             <NavBar />
-            <Hero tituto='Perguntas' />
+            <Hero tituto='Perguntas' includeSearchBar />
             
             <section className='perguntas-container'>
                 {perguntas 

@@ -30,7 +30,7 @@ const Resposta = (props:RespostaType) => {
             <p> <small>30/06/2024</small> <br /> {props.mensagem} </p>
         </div>
 
-        <ComentarioContainer comentarios={props.comentarios} />
+        {props.comentarios && props.comentarios.length > 0 && <ComentarioContainer comentarios={props.comentarios} />}
     </article>
     )
 }

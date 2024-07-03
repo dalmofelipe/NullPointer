@@ -5,6 +5,7 @@
     align-items: flex-start;
     gap: 15px;
     max-width: 1040px;
+    padding: 20px;
 }
 
 .respostas-container h3 {

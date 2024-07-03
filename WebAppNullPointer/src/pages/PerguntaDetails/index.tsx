@@ -46,13 +46,15 @@ const PerguntaDetails = () => {
             <div className='pergunta-mensagem' >
                 <span className="pergunta-votos">
                     <a href="/" onClick={event => voteUp(event)}><FaRegThumbsUp /></a>
-                    <b>{pergunta.votos}</b>
+                    <b>{pergunta.votos||0}</b>
                     <a href="/"  onClick={event => voteDown(event)}><FaRegThumbsDown /></a>
                 </span>
 
                 <p>
-                    <small>30/06/2024 - {pergunta.visualizacoes} Visualizações</small> 
-                    <br />
+                    <small>
+                        <span>30/06/2024</span>  
+                        <span> {pergunta.visualizacoes||0} Visualizações</span>
+                    </small> 
                     {pergunta.mensagem}
                 </p>
             </div>

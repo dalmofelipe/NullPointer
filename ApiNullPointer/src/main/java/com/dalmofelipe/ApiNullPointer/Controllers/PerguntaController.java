@@ -28,6 +28,7 @@ public class PerguntaController {
         return ResponseEntity.ok(perguntaService.getOne(id));
     }
 
+    // TODO: implementar paginação
     @GetMapping
     public ResponseEntity<List<PerguntaRecord>> getAll() {
         return ResponseEntity.ok(perguntaService.getAll());
