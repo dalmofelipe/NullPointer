@@ -8,7 +8,7 @@ type HeroInput = {
 const Hero = ({ tituto, includeSearchBar = false } : HeroInput) => {
     return (
         <div className="hero-container">
-            <h3>{ tituto || "Hero" }</h3>
+            <h4>{ tituto || "Hero" }</h4>
 
             {includeSearchBar && <input type="text" name="search" id="search" />}
         </div>

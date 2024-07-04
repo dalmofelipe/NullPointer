@@ -22,8 +22,22 @@ const savePergunta= async (pergunta:PerguntaType) => {
     })
 }
 
+type RespostaCreate = {
+    perguntaId: number,
+    mensagem: string
+}
+
+const saveResposta = async (resposta:RespostaCreate) => {
+    return await fetch(BASE_URL_API + `/respostas`, {
+        method: "POST",
+        body: JSON.stringify(resposta),
+        headers: new Headers({'content-type': 'application/json'})
+    })
+}
+
 export {
     getAllPerguntas,
     getPerguntaByID,
-    savePergunta
-}
+    savePergunta,
+    saveResposta
+};

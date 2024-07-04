@@ -62,11 +62,7 @@ const PerguntaDetails = () => {
                 </p>
             </div>
 
-            {/* <div className="pergunta-buttons">
-                <input type="button" value="Responder" className='btn btn-sm btn-destaque' />
-            </div> */}
-
-            <RespostaForm />
+            <RespostaForm id={pergunta.id} />
 
             <RespostasContainer respostasArray={pergunta.respostas} />
         </div>

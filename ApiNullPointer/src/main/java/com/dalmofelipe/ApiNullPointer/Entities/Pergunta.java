@@ -31,8 +31,6 @@ public class Pergunta {
     private Integer visualizacoes;
     private Integer votos;
     private LocalDateTime data;
-
-    // TODO: modificar para um padrão com string
     private String tags;
 
     @OneToMany(mappedBy = "pergunta", fetch = FetchType.EAGER)

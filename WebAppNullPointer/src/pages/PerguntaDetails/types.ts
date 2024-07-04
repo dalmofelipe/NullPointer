@@ -18,6 +18,6 @@ export type PerguntaDetailsType = {
     mensagem: string
     visualizacoes: number
     votos: number
-    tags: [string]
+    tags: string
     respostas: [Resposta]
 }

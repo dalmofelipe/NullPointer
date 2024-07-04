@@ -1,13 +1,28 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { saveResposta } from '../../services/nullpointer.service'
 import './styles.css'
 
-const RespostaForm = () => {
+interface Props {
+    id:number
+}
+
+const RespostaForm = ({id}:Props) => {
 
     const [mensagem, setMensagem] = useState("")
 
-    const submitHandle = (event:any) => {
+    const navigate = useNavigate()
+
+    const submitHandle = async  (event:any) => {
         event?.preventDefault()
-        console.log("enviando mensagem ...")
+
+        await saveResposta({
+            perguntaId: id,
+            mensagem
+        })
+
+        // TODO: impletementar context para perguntas
+        navigate(0)
     }
     
     const resetHandle = (event:any) => {

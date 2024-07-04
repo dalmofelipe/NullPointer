@@ -9,6 +9,8 @@
 
     border-radius: 8px;
     border: 1px solid grey;
+
+    box-sizing: border-box;
 }
 
 .pergunta-form-page label {
@@ -16,8 +18,7 @@
 }
 
 .pergunta-form-page input, textarea {
-    width: 100%;
-    max-width: 980px;
+    width: 98%;
     padding: 8px;
     font-size: 16px;
 }
