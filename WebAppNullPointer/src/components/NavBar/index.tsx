@@ -9,7 +9,7 @@ const NavBar = () => {
 
             <div style={{flexGrow: 1}}></div>
 
-            <NavLink to="/" className="navbar-menu">Perguntas</NavLink>
+            <NavLink to="/pergunta" className="navbar-menu">Criar Pergunta</NavLink>
             <NavLink to="/tags" className="navbar-menu">Tags</NavLink>
         </menu>
     )

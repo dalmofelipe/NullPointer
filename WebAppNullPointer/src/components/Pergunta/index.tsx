@@ -10,7 +10,9 @@ const Pergunta = ({ id, titulo, mensagem, visualizacoes, votos, tags }:PerguntaT
     return <article className='pergunta-container'>
         {/* <input type="hidden" name="id" value={id}/> */}
 
-        <NavLink to={`/perguntas/${id}`} className="pergunta-ttl-link">{titulo}</NavLink>
+        <NavLink
+            to={`/perguntas/${id}`} 
+            className="pergunta-ttl-link">{titulo}</NavLink>
 
         <p>{mensagem}</p>
 

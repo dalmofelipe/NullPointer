@@ -5,5 +5,5 @@ export type PerguntaType = {
   mensagem: string
   visualizacoes: number
   votos: number
-  tags: [string]
+  tags: string
 }
