@@ -1,12 +1,12 @@
+import { useLayoutEffect } from "react";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 
 import PerguntaDetails from "./pages/PerguntaDetails";
+import PerguntaFormPage from "./pages/PerguntaFormPage";
 import PerguntasContainer from './pages/PerguntasContainer';
 import TagsPage from "./pages/TagsPage";
 
 import './App.css';
-import PerguntaFormPage from "./pages/PerguntaFormPage";
-import { useLayoutEffect } from "react";
 
 const Wrapper = ({children}:any) => {
   const location = useLocation();

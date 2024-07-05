@@ -1,11 +1,13 @@
 import { NavLink } from "react-router-dom";
 
 import PerguntaTags from "../PerguntaTags";
-import { PerguntaType } from './types';
+import { PerguntaContainerItem } from "../../types/webapp.types";
 
 import './styles.css';
 
-const Pergunta = ({ id, titulo, mensagem, visualizacoes, votos, tags }:PerguntaType) => {
+const Pergunta = ({ 
+        id, titulo, mensagem, visualizacoes, votos, tags 
+    }:PerguntaContainerItem) => {
 
     return <article className='pergunta-container'>
         {/* <input type="hidden" name="id" value={id}/> */}

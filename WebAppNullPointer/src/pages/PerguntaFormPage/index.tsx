@@ -1,11 +1,11 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+
 import Hero from '../../components/Hero'
 import NavBar from '../../components/NavBar'
-import { PerguntaType } from '../../components/Pergunta/types'
 import { savePergunta } from '../../services/nullpointer.service'
-import { useNavigate } from 'react-router-dom'
-import './styles.css'
 
+import './styles.css'
 
 const PerguntaFormPage = () => {
 
@@ -18,7 +18,7 @@ const PerguntaFormPage = () => {
     const submitHandle = async (event:any) => {
         event?.preventDefault()
 
-        const p = await savePergunta({titulo, mensagem, tags} as PerguntaType)
+        const p = await savePergunta({titulo, mensagem, tags} as PerguntaCreate)
         console.log('Pergunta salva >>> ', p)
         navigate("/")
     }

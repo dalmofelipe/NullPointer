@@ -1,5 +1,3 @@
-import { PerguntaType } from "../components/Pergunta/types";
-
 const BASE_URL_API = import.meta.env.VITE_BASE_URL_API
 
 const getAllPerguntas = async () => {
@@ -14,17 +12,12 @@ const getPerguntaByID = async (id:any) => {
         .catch(error => console.error(`Error nullpointer.service.getPerguntaByID: ${error}`));
 }
 
-const savePergunta= async (pergunta:PerguntaType) => {
+const savePergunta= async (pergunta:PerguntaCreate) => {
     return await fetch(BASE_URL_API + `/perguntas`, {
         method: "POST",
         body: JSON.stringify(pergunta),
         headers: new Headers({'content-type': 'application/json'})
     })
-}
-
-type RespostaCreate = {
-    perguntaId: number,
-    mensagem: string
 }
 
 const saveResposta = async (resposta:RespostaCreate) => {

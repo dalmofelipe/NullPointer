@@ -1,7 +1,6 @@
-import { FaRegThumbsUp, FaRegThumbsDown } from "react-icons/fa6";
+import { FaRegThumbsDown, FaRegThumbsUp } from "react-icons/fa6";
 
-
-import { Resposta as RespostaType } from "../../pages/PerguntaDetails/types";
+import { Resposta as RespostaType } from "../../types/webapp.types";
 import ComentarioContainer from "../ComentarioContainer";
 
 import "./styles.css";

@@ -1,4 +1,4 @@
-import { Resposta as RespostaType } from "../../pages/PerguntaDetails/types"
+import { Resposta as RespostaType } from "../../types/webapp.types"
 import Resposta from "../Resposta"
 import "./styles.css"
 

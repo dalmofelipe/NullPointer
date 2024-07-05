@@ -9,7 +9,7 @@ import RespostaForm from '../../components/RespostaForm'
 import RespostasContainer from '../../components/RespostasContainer/intex'
 
 import { getPerguntaByID } from '../../services/nullpointer.service'
-import { PerguntaDetailsType } from './types'
+import { PerguntaDetailsType } from '../../types/webapp.types'
 
 import './styles.css'
 

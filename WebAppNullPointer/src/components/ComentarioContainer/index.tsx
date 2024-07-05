@@ -1,4 +1,4 @@
-import { Comentario } from '../../pages/PerguntaDetails/types'
+import { Comentario } from '../../types/webapp.types'
 import './styles.css'
 
 interface Props {

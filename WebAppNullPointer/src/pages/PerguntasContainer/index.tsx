@@ -2,13 +2,13 @@ import { useEffect, useState } from 'react'
 import Hero from '../../components/Hero'
 import NavBar from '../../components/NavBar'
 import Pergunta from '../../components/Pergunta'
-import { PerguntaType } from '../../components/Pergunta/types'
+import { PerguntaContainerItem } from '../../types/webapp.types' 
 import { getAllPerguntas } from '../../services/nullpointer.service'
 import './styles.css'
 
 const PerguntasContainer = () => {
 
-    const [perguntas, setPerguntas] = useState([{} as PerguntaType])
+    const [perguntas, setPerguntas] = useState([{} as PerguntaContainerItem])
 
     useEffect(() => {
         const run = async () => {

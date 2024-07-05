@@ -1,9 +1,10 @@
-v0.1.0
+v0.1.0 
+- mvp - o minimo para cadastrar perguntas e respostas
 - fix validar todos formularios
-- refatorar os types entre os tipos de exibição no frontend e os de backend
 - fix pra validar todas datas, votos e visualizaçõess
-- implementar suporte a rich text
-
+- workflow actions para build das imagens envio ao docker hub
 
 v0.2.0
+- mvp + completos
+- implementar suporte a rich text
 - implementar perfil de usuários, cadastro e login
