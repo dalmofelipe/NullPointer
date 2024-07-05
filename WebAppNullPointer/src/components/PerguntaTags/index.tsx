@@ -1,9 +1,10 @@
 import "./styles.css"
 
 interface Props {
-    tags?: string,
-    maxWidth: number | string,
+    tags?: string
+    maxWidth: number | string
     align?: string
+    margin?: string
 }
 
 const PerguntaTags = (props:Props) => {
@@ -14,7 +15,8 @@ const PerguntaTags = (props:Props) => {
         <div
             style={{
                 maxWidth: props.maxWidth,
-                justifyContent: `flex-${props.align||'end'}`
+                justifyContent: `flex-${props.align||'end'}`,
+                margin: `${props.margin||'0px'}`
             }} 
             className="pergunta-tags" >
 

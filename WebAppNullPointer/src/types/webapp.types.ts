@@ -7,13 +7,14 @@ export type PerguntaContainerItem = {
     tags: string
 }
 export type PerguntaDetailsType = PerguntaContainerItem & {
+    data: string
     respostas: Resposta[]
 }
 
 export type Resposta = {
     id:number
     mensagem: string
-    data: Date
+    data: string
     votos: number 
     comentarios: [Comentario]
 }
@@ -21,6 +22,6 @@ export type Resposta = {
 export type Comentario = {
     id:number
     mensagem: string
-    data: Date
+    data: string
 }
 

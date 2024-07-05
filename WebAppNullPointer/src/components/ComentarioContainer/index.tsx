@@ -6,14 +6,20 @@ interface Props {
 }
 
 const ComentarioContainer = (props:Props) => {
+
     return (
         <section className='comentario-container'>
             {props.comentarios 
-                && props.comentarios.map((c, index) => 
-            <article key={index}>
-                <input type="hidden" name="" value={c.id}/>
-                <small>{c.mensagem} * 30/06/2024</small>
-            </article>)}
+                && props.comentarios.map((c, index) => {
+                    const date = new Date(c.data)
+                    const dataFormatada = date.toLocaleString('pt-BR')
+
+                    return <article key={index}>
+                        <input type="hidden" name="" value={c.id}/>
+                        <small>{c.mensagem} --- {dataFormatada}</small>
+                    </article>
+                }
+            )}
         </section>
     )
 }

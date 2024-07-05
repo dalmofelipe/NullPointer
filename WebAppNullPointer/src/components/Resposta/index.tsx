@@ -16,6 +16,10 @@ const Resposta = (props:RespostaType) => {
         console.log('down vote')
     }
 
+    const date = new Date(props.data)
+    const dataFormatada = date.toLocaleString('pt-BR')
+
+
     return (
         <article className="resposta">
             <input type="hidden" value={props.id || 0} />
@@ -27,7 +31,7 @@ const Resposta = (props:RespostaType) => {
                     <a href="/"  onClick={event => voteDown(event)}><FaRegThumbsDown /></a>
                 </span>
 
-                <p> <small>30/06/2024</small> <br /> {props.mensagem} </p>
+                <p> <small>{dataFormatada}</small> <br /> {props.mensagem} </p>
             </div>
 
             {props.comentarios && props.comentarios.length > 0 

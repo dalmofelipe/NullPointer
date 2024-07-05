@@ -37,6 +37,9 @@ const PerguntaDetails = () => {
         console.log('down vote')
     }
 
+    const date = new Date(pergunta.data)
+    const dataFormatada = date.toLocaleString('pt-BR')
+
 
     return (
         <div className='pergunta-details'>
@@ -44,7 +47,11 @@ const PerguntaDetails = () => {
 
             <Hero tituto={pergunta.titulo} />
             
-            <PerguntaTags tags={pergunta.tags} maxWidth={'100%'} align='start'/>
+            <PerguntaTags 
+                tags={pergunta.tags} 
+                maxWidth={'100%'} 
+                align='start'
+                margin='15px 0px 0px 0px' />
 
             <div className='pergunta-mensagem' >
                 <span className="pergunta-votos">
@@ -55,7 +62,7 @@ const PerguntaDetails = () => {
 
                 <p>
                     <small>
-                        <span>30/06/2024</span>  
+                        <span>{dataFormatada}</span>
                         <span> {pergunta.visualizacoes||0} Visualizações</span>
                     </small> 
                     {pergunta.mensagem}

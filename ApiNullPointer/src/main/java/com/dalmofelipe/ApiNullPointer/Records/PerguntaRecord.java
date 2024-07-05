@@ -9,4 +9,9 @@ public record PerguntaRecord(
     Integer visualizacoes,
     Integer votos,
     String tags
-) {}
+) {
+    public PerguntaRecord {
+        visualizacoes = 0;
+        votos = 0;
+    }
+}
