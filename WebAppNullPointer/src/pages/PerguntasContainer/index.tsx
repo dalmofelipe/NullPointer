@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react'
 import Hero from '../../components/Hero'
-import NavBar from '../../components/NavBar'
 import Pergunta from '../../components/Pergunta'
-import { PerguntaContainerItem } from '../../types/webapp.types' 
 import { getAllPerguntas } from '../../services/nullpointer.service'
+import { PerguntaContainerItem } from '../../types/webapp.types'
 import './styles.css'
 
 const PerguntasContainer = () => {
@@ -20,7 +19,6 @@ const PerguntasContainer = () => {
 
     return (
         <div>
-            <NavBar />
             <Hero tituto='Perguntas' includeSearchBar />
             
             <section className='perguntas-container'>
