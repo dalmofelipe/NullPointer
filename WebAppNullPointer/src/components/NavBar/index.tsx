@@ -5,7 +5,7 @@ import "./styles.css"
 const NavBar = () => {
     return (
         <menu className="navbar-container">
-            <NavLink to="/" className="navbar-logo">Null<span>Pointer</span>Exception</NavLink>
+            <NavLink to="/" className="navbar-logo">NullPointer<span>Exception</span></NavLink>
 
             <div style={{flexGrow: 1}}></div>
 
