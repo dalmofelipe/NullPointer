@@ -6,4 +6,4 @@ export VITE_BASE_URL_API
 
 echo "VITE_BASE_URL_API set to $VITE_BASE_URL_API"
 
-yarn --cwd WebAppNullPointer/ dev
+yarn --cwd ../WebAppNullPointer/ dev

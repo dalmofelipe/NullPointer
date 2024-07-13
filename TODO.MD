@@ -5,6 +5,7 @@ v0.1.0
 - workflow actions para build das imagens envio ao docker hub
 
 v0.2.0
-- mvp + completos
 - implementar suporte a rich text
-- implementar perfil de usuários, cadastro e login
+
+v0.3.0
+- implementar cadastro e login de usuários
