@@ -3,7 +3,6 @@ import { FaRegThumbsDown, FaRegThumbsUp } from 'react-icons/fa6'
 import { useParams } from 'react-router-dom'
 
 import Hero from '../../components/Hero'
-import NavBar from '../../components/NavBar'
 import PerguntaTags from '../../components/PerguntaTags'
 import RespostaForm from '../../components/RespostaForm'
 import RespostasContainer from '../../components/RespostasContainer/intex'
@@ -43,8 +42,6 @@ const PerguntaDetails = () => {
 
     return (
         <div className='pergunta-details'>
-            <NavBar />
-
             <Hero tituto={pergunta.titulo} />
             
             <PerguntaTags 
