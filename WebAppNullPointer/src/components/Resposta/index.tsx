@@ -4,6 +4,7 @@ import { Resposta as RespostaType } from "../../types/webapp.types";
 import ComentarioContainer from "../ComentarioContainer";
 
 import "./styles.css";
+import ComentarioForm from "../ComentarioForm";
 
 const Resposta = (props:RespostaType) => {
 
@@ -36,6 +37,8 @@ const Resposta = (props:RespostaType) => {
 
             {props.comentarios && props.comentarios.length > 0 
                 && <ComentarioContainer comentarios={props.comentarios} />}
+
+            <ComentarioForm id={props.id} />
         </article>
     )
 }

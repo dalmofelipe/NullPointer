@@ -3,6 +3,11 @@ type RespostaCreate = {
     mensagem: string
 }
 
+type ComentarioCreate = {
+    respostaId: number,
+    mensagem: string
+}
+
 type PerguntaCreate = {
     titulo: string
     mensagem: string

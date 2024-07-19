@@ -28,9 +28,18 @@ const saveResposta = async (resposta:RespostaCreate) => {
     })
 }
 
+const saveComentario = async (comentario:ComentarioCreate) => {
+    return await fetch(BASE_URL_API + `/comentarios`, {
+        method: "POST",
+        body: JSON.stringify(comentario),
+        headers: new Headers({'content-type': 'application/json'})
+    })
+}
+
 export {
     getAllPerguntas,
     getPerguntaByID,
     savePergunta,
-    saveResposta
+    saveResposta,
+    saveComentario
 };

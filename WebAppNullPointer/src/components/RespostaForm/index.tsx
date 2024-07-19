@@ -21,7 +21,7 @@ const RespostaForm = ({id}:Props) => {
             mensagem
         })
 
-        // TODO: impletementar context para perguntas
+        // TODO: impletementar context para perguntas e respostas
         navigate(0)
     }
     

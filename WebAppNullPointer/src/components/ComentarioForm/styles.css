@@ -1,0 +1,33 @@
+.comentario-form {
+    color: white;
+
+    width: 96%;
+
+    margin-left: 34px;
+    margin-top: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.comentario-form form {
+    width: 100%;
+}
+
+.comentario-form form textarea {
+    font-size: small;
+
+    width: 98%;
+}
+
+.cform-btns {
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+}
