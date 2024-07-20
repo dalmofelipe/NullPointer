@@ -1,9 +1,7 @@
 .comentario-container {
     margin: 0px;
-    margin-left: 34px;
-    margin-top: 20px;
-
-    
+    margin-left: 45px;
+    margin-top: 10px;
     border-left: 3px solid whitesmoke;
 
     display: flex;

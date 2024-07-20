@@ -1,7 +1,7 @@
-import './styles.css'
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import PerguntaContext from '../../contexts/PerguntaContext';
 import { saveComentario } from '../../services/nullpointer.service';
-import { useNavigate } from 'react-router-dom';
+import './styles.css';
 
 
 interface Props {
@@ -10,10 +10,9 @@ interface Props {
 
 const ComentarioForm = (props:Props) => {
 
-    const navigate = useNavigate()
-
     const [showForm, setShowForm] = useState(false)
     const [mensagem, setMensagem] = useState("")
+    const { pergunta, setPergunta } = useContext(PerguntaContext);
 
     type ButtonEvent = React.MouseEvent<HTMLButtonElement>;
 
@@ -23,17 +22,27 @@ const ComentarioForm = (props:Props) => {
         setMensagem("")
     }
 
+    const updateComentarios = async (comentarioFromDb:any) => {
+        pergunta.respostas.map(r => {
+            if(r.id == props.id) {
+                r?.comentarios.push(comentarioFromDb)
+            }
+        })
+
+        setPergunta({...pergunta})
+    }
+
     const handleSaveComentario = async (event: ButtonEvent) => {
         event.preventDefault()
 
-        console.log(`save comentario na resposta id ${props.id} >>> `, mensagem)
-
-        await saveComentario({
+        const comentarioFromDb:any = await saveComentario({
             respostaId: props.id,
             mensagem
         })
-        
-        navigate(0)
+
+        updateComentarios(comentarioFromDb)
+        setShowForm(!showForm)
+        setMensagem("")
     }
 
     return (

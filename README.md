@@ -14,7 +14,9 @@ Aplicação de Perguntas e Respostas.
 git clone https://github.com/dalmofelipe/NullPointer.git
 cd NullPointer
 docker compose up -d
-cd Scripts
+cd WebAppNullPointer
+npm install
+cd ../Scripts
 ./webapp_start.sh
 ./backend_start.sh
 ```

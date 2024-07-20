@@ -24,4 +24,3 @@ export type Comentario = {
     mensagem: string
     data: string
 }
-

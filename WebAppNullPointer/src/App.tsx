@@ -8,6 +8,7 @@ import TagsPage from "./pages/TagsPage";
 
 import './App.css';
 import DefaultLayout from "./layouts/default";
+import { PerguntaProvider } from "./contexts/PerguntaProvider";
 
 const Wrapper = ({children}:any) => {
   const location = useLocation();
@@ -27,7 +28,9 @@ function App() {
           <Route path="/" element={<DefaultLayout />} >
             <Route index element={<PerguntasContainer />} />
             <Route path="/pergunta" element={<PerguntaFormPage />} />
-            <Route path="/perguntas/:perguntaId" element={<PerguntaDetails />} />
+            <Route path="/perguntas/:perguntaId" element={
+                <PerguntaProvider><PerguntaDetails /></PerguntaProvider>
+              } />
             <Route path='/tags' element={<TagsPage />} />
           </Route>
         </Routes>

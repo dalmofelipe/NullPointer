@@ -25,7 +25,7 @@ const saveResposta = async (resposta:RespostaCreate) => {
         method: "POST",
         body: JSON.stringify(resposta),
         headers: new Headers({'content-type': 'application/json'})
-    })
+    }).then(response => response.json())
 }
 
 const saveComentario = async (comentario:ComentarioCreate) => {
@@ -33,7 +33,7 @@ const saveComentario = async (comentario:ComentarioCreate) => {
         method: "POST",
         body: JSON.stringify(comentario),
         headers: new Headers({'content-type': 'application/json'})
-    })
+    }).then(response => response.json())
 }
 
 export {

@@ -1,6 +1,7 @@
-import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { saveResposta } from '../../services/nullpointer.service'
+import { useContext, useState } from 'react'
+import PerguntaContext from '../../contexts/PerguntaContext'
+import { saveResposta, getPerguntaByID } from '../../services/nullpointer.service'
+
 import './styles.css'
 
 interface Props {
@@ -9,9 +10,13 @@ interface Props {
 
 const RespostaForm = ({id}:Props) => {
 
-    const [mensagem, setMensagem] = useState("")
 
-    const navigate = useNavigate()
+    const [mensagem, setMensagem] = useState("")
+    const { pergunta, setPergunta } = useContext(PerguntaContext);
+
+    const reloadState = async () => {
+        setPergunta(await getPerguntaByID(id));
+    }
 
     const submitHandle = async  (event:any) => {
         event?.preventDefault()
@@ -21,8 +26,8 @@ const RespostaForm = ({id}:Props) => {
             mensagem
         })
 
-        // TODO: impletementar context para perguntas e respostas
-        navigate(0)
+        await reloadState()
+        setMensagem("")
     }
     
     const resetHandle = (event:any) => {

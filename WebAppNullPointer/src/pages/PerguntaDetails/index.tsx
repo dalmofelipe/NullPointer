@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useContext, useEffect } from 'react'
 import { FaRegThumbsDown, FaRegThumbsUp } from 'react-icons/fa6'
 import { useParams } from 'react-router-dom'
 
@@ -8,8 +8,8 @@ import RespostaForm from '../../components/RespostaForm'
 import RespostasContainer from '../../components/RespostasContainer/intex'
 
 import { getPerguntaByID } from '../../services/nullpointer.service'
-import { PerguntaDetailsType } from '../../types/webapp.types'
 
+import PerguntaContext from '../../contexts/PerguntaContext'
 import './styles.css'
 
 
@@ -17,15 +17,16 @@ const PerguntaDetails = () => {
 
     const { perguntaId } = useParams();
 
-    const [pergunta, setPergunta] = useState({} as PerguntaDetailsType)
+    const { pergunta, setPergunta } = useContext(PerguntaContext);
 
     useEffect(() => {
-        const run = async () => {
-            setPergunta(await getPerguntaByID(perguntaId))
+        async function run() {
+            const p = await getPerguntaByID(perguntaId)
+            setPergunta(p);
         }
-
         run()
     }, [])
+    
 
     const voteUp = (event:any) => {
         event?.preventDefault()
@@ -66,9 +67,9 @@ const PerguntaDetails = () => {
                 </p>
             </div>
 
-            <RespostaForm id={pergunta.id} />
-
             <RespostasContainer respostasArray={pergunta.respostas} />
+
+            <RespostaForm id={pergunta.id} />
         </div>
     )
 }
