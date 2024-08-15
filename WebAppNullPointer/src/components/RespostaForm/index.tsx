@@ -12,9 +12,10 @@ const RespostaForm = ({id}:Props) => {
 
 
     const [mensagem, setMensagem] = useState("")
-    const { pergunta, setPergunta } = useContext(PerguntaContext);
+    const {pergunta, setPergunta} = useContext(PerguntaContext);
 
     const reloadState = async () => {
+        pergunta
         setPergunta(await getPerguntaByID(id));
     }
 
