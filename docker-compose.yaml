@@ -26,7 +26,7 @@ services:
   
   api-nullpointer:
     build: 
-      context: ./ApiNullPointer
+      context: ./src/api
       args:
         - WEBAPP_BASE_URL=http://localhost:9000
     image: dalmofelipe/nullpointer-api:0.1.0
@@ -43,7 +43,7 @@ services:
 
   webapp-nullpointer:
     build: 
-      context: ./WebAppNullPointer
+      context: ./src/web
       args:
         - API_BASE_URL=http://localhost:8000/api
     image: dalmofelipe/nullpointer-webapp:0.1.0
