@@ -5,6 +5,7 @@ import Hero from '../../components/Hero'
 import { savePergunta } from '../../services/nullpointer.service'
 
 import './styles.css'
+import RichTextEditor from '../../components/RichTextEditor'
 
 const PerguntaFormPage = () => {
 
@@ -53,11 +54,7 @@ const PerguntaFormPage = () => {
 
 
                 <label htmlFor="mensagem">Mensagem</label>
-                <textarea 
-                    name="mensagem" 
-                    id="mensagem" 
-                    value={mensagem} 
-                    onChange={(e) => setMensagem(e.target.value)}></textarea>
+                <RichTextEditor />
 
           
                 <div>

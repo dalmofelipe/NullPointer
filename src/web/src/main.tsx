@@ -1,3 +1,5 @@
+import 'jodit/es2021/jodit.min.css'
+
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'

@@ -1,0 +1,7 @@
+.editor-container {
+    width: 100%;
+    min-height: 400px;
+}
+.jodit-react-container {
+    width: 100% !important;
+}

@@ -1,0 +1,49 @@
+/* Customizando a barra de ferramentas */
+.jodit-toolbar__box {
+    background-color: #2a2a2a !important;
+    border-color: #2a2a2a !important;
+}
+
+/* Botões da barra de ferramentas */
+.jodit-toolbar-button__button {
+    background-color: #333 !important;
+}
+.jodit-toolbar-button__button:hover * {
+    background-color: none !important;
+}
+.jodit-icon, 
+.jodit-icon:hover {
+    fill: silver !important;
+    stroke: silver !important;
+}
+
+.jodit-container {
+    background-color: #1a1a1a !important;
+    color: #e0e0e0 !important;
+}
+.jodit-placeholder {
+    color: #777 !important;
+    /* Cor do placeholder (texto sugestivo) */
+}
+.jodit-wysiwyg {
+    background-color: #1e1e1e !important;
+    /* Fundo ainda mais escuro para a área de edição */
+    color: #e5e5e5 !important;
+    /* Cor do texto */
+}
+.jodit-wysiwyg p {
+    color: #c0c0c0 !important;
+    /* Cor do parágrafo */
+}
+
+
+/* status bar */
+.jodit-status-bar {
+    background-color: #2a2a2a !important;
+    border-color: #2a2a2a !important;
+}
+
+/* menu links */
+.jodit-ui-input__input {
+    background-color: #333 !important;
+}
