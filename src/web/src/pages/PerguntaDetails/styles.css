@@ -8,23 +8,15 @@
     align-items: flex-start;
     flex-wrap: nowrap;
     gap: 20px;
-
     padding: 20px;
 }
-.pergunta-mensagem small {
-    display: flex;
-    justify-content: flex-start;
-
-    gap: 20px;
-    margin-bottom: 10px;
-
-    text-wrap: nowrap;
+.pergunta-mensagem__datetime {
+    margin-top: 0px;
 }
-.pergunta-mensagem p {
-    box-sizing: border-box;
-    padding: 0px;
-    margin: 0px;
+.pergunta-mensagem__mensagem {
+    color: white;
 }
+
 
 .pergunta-buttons {
     display: flex;

@@ -1,6 +1,7 @@
 import { useContext, useEffect } from 'react'
 import { FaRegThumbsDown, FaRegThumbsUp } from 'react-icons/fa6'
 import { useParams } from 'react-router-dom'
+import DOMPurify from 'dompurify';
 
 import Hero from '../../components/Hero'
 import PerguntaTags from '../../components/PerguntaTags'
@@ -58,13 +59,16 @@ const PerguntaDetails = () => {
                     <a href="/"  onClick={event => voteDown(event)}><FaRegThumbsDown /></a>
                 </span>
 
-                <p>
-                    <small>
-                        <span>{dataFormatada}</span>
-                        <span> {pergunta.visualizacoes||0} Visualizações</span>
-                    </small> 
-                    {pergunta.mensagem}
-                </p>
+                <div className="pergunta-mensagem__mensagem">
+                    <p className='pergunta-mensagem__datetime'>
+                        <small>
+                            <span>{dataFormatada}</span>
+                            <span> {pergunta.visualizacoes||0} Visualizações</span>
+                        </small> 
+                    </p>
+                    
+                    <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(pergunta.mensagem) }} />    
+                </div>
             </div>
 
             <RespostasContainer respostasArray={pergunta.respostas} />

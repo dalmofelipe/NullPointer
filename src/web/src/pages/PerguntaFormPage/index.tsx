@@ -54,7 +54,7 @@ const PerguntaFormPage = () => {
 
 
                 <label htmlFor="mensagem">Mensagem</label>
-                <RichTextEditor />
+                <RichTextEditor mensagem={mensagem} setMensagem={setMensagem} />
 
           
                 <div>

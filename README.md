@@ -6,7 +6,6 @@
 
 Java & Spring Boot | React & TypeScript | MySQL | Docker
 
-
 ### Releases
 
 ```
@@ -27,14 +26,12 @@ docker compose up -d
     - __Back-end__: Será necessário banco de dados configurado, de preferência do manifesto do docker compose
 
         ```sh
-        # Run API
         docker compose up mysql -d
         ```
 
         - Iniciar Spring Boot, necessário exportar variavel de ambiente __WEBAPP_BASE_URL__ com endereço de host e porta, de onde roda o frontend para liberação do cors. E outra variavel __DB_HOST__ com endereço de host e porta do banco de dados.
 
         ```sh
-        # Run API
         export WEBAPP_BASE_URL=http://localhost:9000 DB_HOST=localhost:3306
         ./src/api/./mvnw clean spring-boot:run -f ./src/api/pom.xml
         ```
@@ -46,10 +43,9 @@ docker compose up -d
         yarn install 
         ```
 
-        - Iniciar script _dev_, onde também será necessário exportar variável de ambiente __API_BASE_URL com host e porta__, endereço que o frontend irá consumir.
+        - Iniciar script _dev_, onde também será necessário exportar variável de ambiente __API_BASE_URL__ com host e porta, endereço que o frontend irá consumir.
 
         ```sh
-        # Run Webapp
         export API_BASE_URL=http://localhost:8000/api
         yarn --cwd ./src/web/ dev
         ```

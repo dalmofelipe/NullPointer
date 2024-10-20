@@ -1,11 +1,16 @@
 import JoditEditor from 'jodit-react';
-import { useMemo, useRef, useState, useCallback } from 'react';
+import { Dispatch, SetStateAction, useMemo, useRef } from 'react';
 import "./custom-dark.css";
 import "./styles.css";
 
-const RichTextEditor = () => {
+interface RichTextEditorProps {
+  mensagem: string;
+  setMensagem: Dispatch<SetStateAction<string>>;
+}
+
+const RichTextEditor: React.FC<RichTextEditorProps> = ({ mensagem, setMensagem }) => {
   const editor = useRef(null);
-  const [content, setContent] = useState('');
+  // const [content, setContent] = useState('');
   const config = useMemo(
     () => ({
       readonly: false,
@@ -21,18 +26,12 @@ const RichTextEditor = () => {
     []
   );
 
-   // Função para atualizar o estado com useCallback para memorizar a função
-  const handleUpdateContent = useCallback((newContent:string) => {
-    setContent(newContent);
-  }, []);
-
   return (    
     <JoditEditor
       ref={editor}
-      value={content}
+      value={mensagem}
       config={config}
-      onBlur={newContent => setContent(newContent)}
-      //onChange={newContent => {}}
+      onBlur={newContent => setMensagem(newContent)}
     />
   );
 };
