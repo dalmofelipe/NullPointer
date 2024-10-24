@@ -22,3 +22,10 @@
     padding: 8px;
     font-size: 16px;
 }
+
+.pergunta-form-page__buttons {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    padding-top: 20px
+}

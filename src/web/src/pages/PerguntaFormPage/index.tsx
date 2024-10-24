@@ -19,7 +19,6 @@ const PerguntaFormPage = () => {
         event?.preventDefault()
 
         const p = await savePergunta({titulo, mensagem, tags} as PerguntaCreate)
-        console.log('Pergunta salva >>> ', p)
         navigate("/")
     }
     
@@ -53,11 +52,11 @@ const PerguntaFormPage = () => {
                     onChange={e => setTags(e.target.value)} />
 
 
-                <label htmlFor="mensagem">Mensagem</label>
+                <label>Mensagem</label>
                 <RichTextEditor mensagem={mensagem} setMensagem={setMensagem} />
 
           
-                <div>
+                <div className='pergunta-form-page__buttons'>
                     <button 
                         onClick={(e) => submitHandle(e)}
                         className='btn btn-sm btn-destaque'>Criar Pergunta</button>

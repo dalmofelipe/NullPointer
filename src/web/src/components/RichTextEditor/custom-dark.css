@@ -44,6 +44,6 @@
 }
 
 /* menu links */
-.jodit-ui-input__input {
+.jodit-ui-input__input, .jodit-ui-text-area__input {
     background-color: #333 !important;
 }

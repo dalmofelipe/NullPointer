@@ -29,7 +29,7 @@ docker compose up -d
         docker compose up mysql -d
         ```
 
-        - Iniciar Spring Boot, necessário exportar variavel de ambiente __WEBAPP_BASE_URL__ com endereço de host e porta, de onde roda o frontend para liberação do cors. E outra variavel __DB_HOST__ com endereço de host e porta do banco de dados.
+        - Iniciar Spring Boot, necessário exportar variavel de ambiente __WEBAPP_BASE_URL__ com endereço de host e porta, de onde roda o frontend para liberação do cors. E outra variavel __DB_HOST__ caso precise informar um endereço de host e porta do banco de dados diferente.
 
         ```sh
         export WEBAPP_BASE_URL=http://localhost:9000 DB_HOST=localhost:3306
